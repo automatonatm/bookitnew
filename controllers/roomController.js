@@ -9,7 +9,6 @@ const allRooms = catchAsync(async (req, res, next) => {
     const resPerPage = 4;
     const roomCount =  await Room.countDocuments();
 
-
     const apiFeatures = new APIFeatures(Room.find(), req.query)
         .search()
         .filter();

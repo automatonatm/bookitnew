@@ -1,26 +1,24 @@
 import mongoose from 'mongoose'
 import validator from 'validator'
 import bcrypt from 'bcryptjs'
+import crypto from 'crypto'
 
 const userSchema = new mongoose.Schema({
         name: {
             type: String,
-            required: [true, 'Username is Required'],
+            required: [true, 'Please enter your name'],
             maxLength: [50, 'Your name cannot exceed 50 characters']
         },
-
         email: {
             type: String,
-            unique: false,
-            required: [true,  'Email field is required'],
-            lowercase: true,
-            validate: [validator.isEmail, 'Please provide a valid email'],
+            required: [true, 'Please enter your email'],
+            unique: true,
+            validate: [validator.isEmail, 'Please enter valid email address']
         },
-
         password: {
             type: String,
-            required: [true, 'Password is required'],
-            minLength: [6, 'Must contain at least 6 characters'],
+            required: [true, 'Please enter your password'],
+            minLength: [6, 'Your password must be longer than 6 characters'],
             select: false
         },
         avatar: {
@@ -39,57 +37,43 @@ const userSchema = new mongoose.Schema({
         },
 
         resetPasswordToken: String,
-
-        resetPasswordExpiredAt: Date
-
+        resetPasswordExpire: Date
     },
     {
-        timestamps: true,
         toJSON: {virtuals: true},
         toObject: {virtuals: true},
-    },
+        timestamps: true
+    }
 );
 
-userSchema.pre('save', async  function (next) {
-    if(!this.isModified('password')) return next();
-    const salt = await bcrypt.genSalt(12);
-    this.password = await bcrypt.hash(this.password, salt);
-    next()
+// Encrypting password before saving user
+userSchema.pre('save', async function (next) {
+    if (!this.isModified('password')) {
+        next()
+    }
 
-});
+    this.password = await bcrypt.hash(this.password, 10)
+})
 
-//Match user password
-userSchema.methods.matchPassword = async function (password) {
-    return await bcrypt.compare(password, this.password)
-};
+// Compare user password
+userSchema.methods.comparePassword = async function (enteredPassword) {
+    return await bcrypt.compare(enteredPassword, this.password)
+}
 
+// Generate password reset token
+userSchema.methods.getResetPasswordToken = function () {
 
+    // Generate token
+    const resetToken = crypto.randomBytes(20).toString('hex')
 
-//Generate and has password token
-userSchema.methods.getResetToken = async function () {
-    //Generate Token
-    const restToken =  crypto.randomBytes(20).toString('hex');
+    // Hash and set to resetPasswordToken field
+    this.resetPasswordToken = crypto.createHash('sha256').update(resetToken).digest('hex');
 
-    //hash token and set to resetPassword token
-    this.resetPasswordToken = crypto.createHash('sha256').update(restToken).digest('hex');
+    // Set token expire time
+    this.resetPasswordExpire = Date.now() + 30 * 60 * 1000
 
-    //Set Expire
-    this.resetPasswordExpiredAt = Date.now() + 10 * 60 *  1000;
-    return restToken;
-};
+    return resetToken;
 
-
-userSchema.methods.getRegistrationToken = async function () {
-    //Generate Token
-    const registrationToken =  crypto.randomBytes(20).toString('hex');
-
-    //hash token and set to resetPassword token
-    this.registrationToken = crypto.createHash('sha256').update(registrationToken).digest('hex');
-
-    //Set Expire
-    this.registrationTokenExpiredAt = Date.now() + 10 * 60 *  1000;
-    return registrationToken;
-};
-
+}
 
 export default mongoose.models.User || mongoose.model('User', userSchema)

@@ -19,12 +19,13 @@ const reducer = (state, action) => {
         const nextState = {
             ...state,
             ...action.payload
-        }
+        };
         return nextState;
     }else {
         return  reducers(state, action);
     }
-}
+};
+
 
 const initStore = () =>  {
     return createStore(reducer, bindMiddleware([thunkMiddleware]))
