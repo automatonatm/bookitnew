@@ -6,7 +6,7 @@ const isAuthenticatedUser = catchAsyncErrors(async (req, res, next) => {
 
     const session = await getSession({ req });
 
-    console.log(req.headers)
+
 
     if (!session) {
         return next(new ErrorHandler('Unauthorised Action', 401));

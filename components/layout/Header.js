@@ -92,7 +92,7 @@ const Header = () => {
                                     <a className="dropdown-item">My Bookings</a>
                                 </Link>
 
-                                <Link href='/me/update'>
+                                <Link href='/profile/update'>
                                     <a className="dropdown-item">Profile</a>
                                 </Link>
 

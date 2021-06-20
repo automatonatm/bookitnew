@@ -16,12 +16,13 @@ module.exports = {
         CLOUDINARY_API_SECRET: '6OecFa4mnzTzS0i56fuBe_yOWQQ',
 
 
-        SMTP_HOST: "",
-        SMTP_PORT: "",
-        SMTP_USER: "",
-        SMTP_PASSWORD: "",
-        SMTP_FROM_EMAIL: "",
-        SMTP_FROM_NAME: "",
+        SMTP_HOST: "smtp.mailtrap.io",
+        SMTP_PORT: "2525",
+        SMTP_USER: "e7fdd2438aa408",
+        SMTP_PASSWORD: "8a25a5a626c0cc",
+        SMTP_FROM_EMAIL: "accounts@thegrynd.com",
+        SMTP_FROM_NAME: "THE GRYND",
+        NEXTAUTH_URL: "",
 
 
         NEXTAUTH_URL: '',
