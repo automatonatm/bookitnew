@@ -9,13 +9,14 @@ import {loadUser} from "../../redux/actions/userActions";
 import {toast} from "react-toastify";
 
 import { signOut } from 'next-auth/client'
+import {loadUserReducer} from "../../redux/reducers/userReducers";
 
 const Header = () => {
     const router = useRouter()
 
     const dispatch = useDispatch();
 
-    const { user, loading } = useSelector(state => state.auth);
+    const { user, loading } = useSelector(state => state.loadedUser);
 
     useEffect(() => {
 
@@ -108,7 +109,8 @@ const Header = () => {
                         !loading && <Link href='/login'>
                             <a className="btn btn-danger px-4 text-white login-header-btn float-right">Login</a>
                         </Link>
-                    )}
+                    )
+                    }
 
                 </div>
             </div>

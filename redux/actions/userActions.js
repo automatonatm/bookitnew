@@ -14,7 +14,7 @@ import {
     FORGOT_PASSWORD_SUCCESS,
     FORGOT_PASSWORD_FAIL,
     RESET_PASSWORD_SUCCESS,
-    RESET_PASSWORD_FAIL, RESET_PASSWORD_REQUEST
+    RESET_PASSWORD_FAIL, RESET_PASSWORD_REQUEST, LOAD_USER_FAIL
 } from "../constants/userConstants";
 
 
@@ -95,13 +95,6 @@ export const loadUser = () => async (dispatch) => {
 
         let url = `/api/me`;
 
-
-        const config = {
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        };
-
         const {data} = await axios.get(url);
 
         dispatch({
@@ -112,7 +105,7 @@ export const loadUser = () => async (dispatch) => {
     } catch (err) {
 
         dispatch({
-            type: REGISTER_USER_FAIL,
+            type: LOAD_USER_FAIL,
             payload: err.response && err.response.data.message ? err.response.data.message : err.message
         })
     }
