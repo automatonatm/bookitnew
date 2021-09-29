@@ -19,7 +19,6 @@ const Index = () => {
 
      const {rooms, resPerPage, filteredRoomsCount, count, errors} = useSelector(state => state.rooms);
 
-
      useEffect(() => {
          if(errors) {
              toast.error(errors);
