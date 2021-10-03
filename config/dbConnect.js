@@ -1,5 +1,7 @@
 import mongoose from 'mongoose';
 
+const connection = {};
+
 const dbConnect = () => {
     if (mongoose.connection.readyState >= 1) {
         return
