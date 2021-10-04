@@ -1,10 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c0912240-de1d-40bc-b6ca-8006a1ead45c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/controllers/paymentControllers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/checkout_session/[roomId].js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/reviews/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/webhook.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/dbConnect.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/dbConnect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/bookings/BookingDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/bookings/BookingDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/Layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/rooms/RoomDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/rooms/RoomDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/roomController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/roomController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Room.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Room.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/actions/bookingActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/bookingActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/actions/roomActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/roomActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/constants/roomConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/constants/roomConstants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/constants/userConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/constants/userConstants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/reducers/roomReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/reducers/roomReducers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +83,10 @@
       <recent name="$PROJECT_DIR$/pages/api" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Node.js.seeder.js">
+    <configuration name="seeder.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/utils/seeder.js" working-dir="$PROJECT_DIR$/utils">
+      <method v="2" />
+    </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -64,6 +100,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
+        <item itemvalue="Node.js.seeder.js" />
       </list>
     </recent_temporary>
   </component>
@@ -86,6 +123,7 @@
       <workItem from="1624723124831" duration="140000" />
       <workItem from="1631805774942" duration="3272000" />
       <workItem from="1631878649441" duration="149000" />
+      <workItem from="1633293222668" duration="15916000" />
     </task>
     <servers />
   </component>
@@ -100,5 +138,46 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1259" height="114" key="GridCell.Tab.0.bottom" timestamp="1633315311869">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="114" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1633315311869" />
+    <state width="1278" height="728" key="GridCell.Tab.0.bottom/0.25.1280.775/1280.0.1920.1156@1280.0.1920.1156" timestamp="1633300571480" />
+    <state width="1278" height="728" key="GridCell.Tab.0.bottom/0.25.1280.775/1280.25.1920.1131@1280.25.1920.1131" timestamp="1633299812717" />
+    <state width="1259" height="114" key="GridCell.Tab.0.center" timestamp="1633315311867">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="114" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1633315311867" />
+    <state width="1278" height="728" key="GridCell.Tab.0.center/0.25.1280.775/1280.0.1920.1156@1280.0.1920.1156" timestamp="1633300571477" />
+    <state width="1278" height="728" key="GridCell.Tab.0.center/0.25.1280.775/1280.25.1920.1131@1280.25.1920.1131" timestamp="1633299812716" />
+    <state width="1259" height="114" key="GridCell.Tab.0.left" timestamp="1633315311866">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="114" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1633315311866" />
+    <state width="1278" height="728" key="GridCell.Tab.0.left/0.25.1280.775/1280.0.1920.1156@1280.0.1920.1156" timestamp="1633300571476" />
+    <state width="1278" height="728" key="GridCell.Tab.0.left/0.25.1280.775/1280.25.1920.1131@1280.25.1920.1131" timestamp="1633299812715" />
+    <state width="1259" height="114" key="GridCell.Tab.0.right" timestamp="1633315311868">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="114" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1633315311868" />
+    <state width="1278" height="728" key="GridCell.Tab.0.right/0.25.1280.775/1280.0.1920.1156@1280.0.1920.1156" timestamp="1633300571479" />
+    <state width="1278" height="728" key="GridCell.Tab.0.right/0.25.1280.775/1280.25.1920.1131@1280.25.1920.1131" timestamp="1633299812717" />
+    <state x="1939" y="211" width="602" height="777" key="find.popup" timestamp="1633301850096">
+      <screen x="1280" y="0" width="1920" height="1156" />
+    </state>
+    <state x="1939" y="211" width="602" height="777" key="find.popup/0.25.1280.775/1280.0.1920.1156@1280.0.1920.1156" timestamp="1633301850096" />
   </component>
 </project>

@@ -58,11 +58,11 @@ const roomSchema = new mongoose.Schema({
             default: false
         },
 
-        rating: {
+        ratings: {
             type: Number,
             default: 0
         },
-        numOfPreviews: {
+        numOfReviews: {
             type: Number,
             default: 0
         },

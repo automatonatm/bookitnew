@@ -33,7 +33,6 @@ export const checkBooking = (roomId, checkInDate, checkOutDate) => async (dispat
         const { data } = await axios.get(link);
 
 
-
         dispatch({
             type: CHECK_BOOKING_SUCCESS,
             payload: data.data

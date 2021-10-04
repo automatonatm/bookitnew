@@ -15,7 +15,10 @@ import Head from "next/head";
 import Image from "next/image";
 import RoomFeatures from "./RoomFeatures";
 import axios from "axios";
+import getStripe from "../../utils/getStripe";
+
 import {checkBooking, getBookedDates} from "../../redux/actions/bookingActions";
+import {CHECK_BOOKING_RESET} from "../../redux/constants/bookingConstants";
 
 
 moment().format();
@@ -27,6 +30,7 @@ const RoomDetails = () => {
     const [checkInDate, setCheckInDate] = useState();
     const [checkOutDate, setCheckOutDate] = useState();
     const [daysOfStay, setDaysOfStay] = useState();
+    const [paymentLoading, setPaymentLoading] = useState(false);
 
     const dispatch = useDispatch();
     const router = useRouter();
@@ -54,9 +58,13 @@ const RoomDetails = () => {
             dispatch(clearErrors())
         }
 
+        return  () => {
+            dispatch({type: CHECK_BOOKING_RESET})
+        }
 
 
-    }, [dispatch]);
+
+    }, [dispatch, id]);
 
 
 
@@ -72,9 +80,11 @@ const RoomDetails = () => {
            const start = moment(checkInDate);
            const end = moment(checkOutDate);
 
-           console.log(start, end);
+           //console.log(start, end);
 
            setDaysOfStay(-moment.duration(start.diff(end)).asDays() + 1);
+
+           //console.log(daysOfStay)
 
            dispatch(checkBooking(id, start, end))
        }
@@ -110,6 +120,33 @@ const RoomDetails = () => {
 
 
    };
+
+   const bookRoom = async (id, pricePerNight) => {
+
+       setPaymentLoading(true)
+       const amount = pricePerNight * daysOfStay
+
+
+
+       try {
+           const link = `/api/checkout_session/${id}?checkInDate=${checkInDate.toISOString()}&checkOutDate=${checkOutDate.toISOString()}&daysOfStay=${daysOfStay}`
+
+           const {data} = await axios.get(link, {params: {amount}})
+
+           const stripe = await getStripe();
+
+           console.log(data)
+
+           // Redirect to checkout
+           stripe.redirectToCheckout({ sessionId: data.id })
+
+       }catch (error) {
+           setPaymentLoading(false)
+           console.log(error)
+           toast.error(error.message)
+       }
+
+   }
 
     return (
         <>
@@ -209,7 +246,12 @@ const RoomDetails = () => {
                             }
 
                             {available && user &&
-                            <button onClick={newBookingHandler} className="btn btn-block py-3 booking-btn">Pay</button>
+                            <button
+                                onClick={() => bookRoom(room.id, room.pricePerNight)}
+                                className="btn btn-block py-3 booking-btn"
+                                disabled={bookingLoading || paymentLoading}
+                            >Pay - ${daysOfStay * room.pricePerNight}
+                            </button>
                             }
 
                         </div>

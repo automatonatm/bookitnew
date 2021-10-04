@@ -13,7 +13,6 @@ const Layout = ({children, title = "Book Best Hotels"}) => {
     return (
         <div>
             <Head>
-
                 <title>{title}</title>
                 <meta charSet="UTF-8"/>
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>

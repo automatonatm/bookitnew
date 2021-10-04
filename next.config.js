@@ -9,12 +9,9 @@ module.exports = {
 
         DB_LOCAL_URI: 'mongodb://localhost:27017/bookit',
         DB_DEV_URI: 'mongodb://localhost:27017/bookit',
-
-
         CLOUDINARY_CLOUD_NAME: 'grynd',
         CLOUDINARY_API_KEY: '499166171559223',
         CLOUDINARY_API_SECRET: '6OecFa4mnzTzS0i56fuBe_yOWQQ',
-
 
         SMTP_HOST: "smtp.mailtrap.io",
         SMTP_PORT: "2525",
@@ -26,5 +23,8 @@ module.exports = {
 
 
         NEXTAUTH_URL: '',
+
+        STRIPE_API_KEY: 'pk_test_jCuPK4XHkdc2Be6MIiJqPSxk',
+        STRIPE_SECRET_KEY: 'sk_test_tJnE1uP9O7SHHQrdaqgv3Q0g',
     }
 };

@@ -1,13 +1,15 @@
 
 //All Rooms Reducer
-
-
 import {
     ALL_ROOMS_FAIL,
     ALL_ROOMS_SUCCESS,
     CLEAR_ERRORS,
     ROOM_DETAILS_FAIL,
-    ROOM_DETAILS_SUCCESS
+    ROOM_DETAILS_SUCCESS,
+    NEW_REVIEW_REQUEST,
+    NEW_REVIEW_SUCCESS,
+    NEW_REVIEW_FAIL,
+    NEW_REVIEW_RESET
 } from "../constants/roomConstants";
 
 
@@ -61,7 +63,42 @@ const roomDetailsReducer = (state={room: {}}, action) => {
 };
 
 
+//room details
+const roomReviewReducer = (state={}, action) => {
+    switch (action.type) {
+        case NEW_REVIEW_REQUEST:
+            return  {
+                loading: true
+            };
+        case NEW_REVIEW_SUCCESS:
+            return  {
+                loading: false,
+                success: action.payload
+            };
+        case NEW_REVIEW_FAIL:
+            return  {
+                loading: false,
+                errors: action.payload
+            };
+
+        case NEW_REVIEW_RESET:
+            return  {
+                success: false
+            };
+
+        case CLEAR_ERRORS:
+            return {
+                ...state,
+                errors: null
+            };
+
+        default: return state;
+    }
+};
+
+
 export  {
     allRoomsReducer,
-    roomDetailsReducer
+    roomDetailsReducer,
+    roomReviewReducer
 }

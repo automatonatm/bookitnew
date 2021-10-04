@@ -2,6 +2,7 @@ import catchAsync from '../middlewares/catchAsync';
 import Room from "../models/Room";
 import  ErrorHandler from '../utils/errorHandler'
 import  APIFeatures from '../utils/apiFeatures'
+import contains from "validator/es/lib/contains";
 
 
 const allRooms = catchAsync(async (req, res, next) => {
@@ -100,10 +101,58 @@ const createRoom = catchAsync(async (req, res, next) => {
 });
 
 
+const createRoomReview = catchAsync(async (req, res, next) => {
+
+    const {rating, comment, roomId} = req.body
+
+    const room = await Room.findById(req.query.id);
+
+    const review = {
+        user: req.user.id,
+        name: req.user.name,
+        rating: Number(rating),
+        comment
+    }
+
+    if(!room) {
+        return next(new ErrorHandler('Room not found', 404))
+    }
+
+    const isReviewed = room.reviews.find(
+        r => r.user.toString() === req.user.toString()
+    )
+
+    if(isReviewed) {
+        room.reviews.forEach(review => {
+            if(review.user.toString() === req.user.id.toString()) {
+                review.comment = comment
+                review.rating = rating
+            }
+        })
+
+    }else  {
+        room.reviews.push(review)
+        room.numOfReviews = room.reviews.length
+    }
+
+
+    room.ratings = room.reviews.reduce((acc, item) => item.rating + acc, 0) / room.reviews.length
+
+    await review.save({validateBeforeSave: false})
+
+
+
+    res.status(204).json({
+        success: true,
+    })
+});
+
+
 export  {
     allRooms,
     getRoom,
     createRoom,
     updateRoom,
-    deleteRoom
+    deleteRoom,
+    createRoomReview
 }

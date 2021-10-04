@@ -48,7 +48,7 @@ const BookingDetails = () => {
                         <hr />
 
                         <h4 className="my-4">Payment Status</h4>
-                        <p className={isPaid ? 'greenColor' : 'redColor'}><b>{isPaid ? 'Paid' : 'Not Paid'}</b></p>
+                        <p className={isPaid ? 'greenColor' : 'redColor'}><b>{isPaid ? 'paid' : 'Not Paid'}</b></p>
 
                         {user && user.role === 'admin' &&
                         <>
