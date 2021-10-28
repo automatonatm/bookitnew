@@ -58,6 +58,7 @@ const RoomDetails = () => {
             dispatch(clearErrors())
         }
 
+
         return  () => {
             dispatch({type: CHECK_BOOKING_RESET})
         }
@@ -135,7 +136,7 @@ const RoomDetails = () => {
 
            const stripe = await getStripe();
 
-           console.log(data)
+          // console.log(data)
 
            // Redirect to checkout
            stripe.redirectToCheckout({ sessionId: data.id })

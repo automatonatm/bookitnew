@@ -3,6 +3,7 @@ import User from "../models/User";
 import Room from "../models/Room";
 import Booking from "../models/Booking";
 
+import getRawBody from 'raw-body'
 
 import  ErrorHandler from '../utils/errorHandler'
 import absoluteUrl from "next-absolute-url/index";
@@ -14,7 +15,11 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 // => api/checkout_session/:roomId
 export const stripeCheckoutSession = catchAsync(async (req, res, next) => {
 
+
+
     const room = await Room.findById(req.query.roomId)
+
+
 
 
     if(!room) {
@@ -48,7 +53,7 @@ export const stripeCheckoutSession = catchAsync(async (req, res, next) => {
 });
 
 // Create new booking after payment   =>   /api/webhook
-export const webhookCheckout = catchAsync(async (req, res) => {
+export const webhookCheckout = catchAsync(async (req, res, next) => {
 
     const rawBody = await getRawBody(req);
 

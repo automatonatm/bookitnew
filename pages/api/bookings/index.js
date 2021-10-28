@@ -11,8 +11,7 @@ const router = nc({ onError });
 
 dbConnect();
 
-router
-    .use(isAuthenticatedUser)
+router.use(isAuthenticatedUser)
     .post(newBooking)
 
 export default router;

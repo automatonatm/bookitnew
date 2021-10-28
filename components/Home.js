@@ -47,9 +47,7 @@ const Index = () => {
             }</h2>
 
             <Link href={'/search'} >
-            <a className="ml-2 back-to-search">
-                <i className="fa fa-arrow-left"/>
-                Back to Search </a>
+            <a className="ml-2 back-to-search"><i className="fa fa-arrow-left"/>Back to Search </a>
             </Link>
             <div className="row">
 

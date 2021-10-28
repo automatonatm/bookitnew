@@ -26,5 +26,8 @@ module.exports = {
 
         STRIPE_API_KEY: 'pk_test_jCuPK4XHkdc2Be6MIiJqPSxk',
         STRIPE_SECRET_KEY: 'sk_test_tJnE1uP9O7SHHQrdaqgv3Q0g',
+        STRIPE_WEBHOOK_SECRET: 'whsec_E8nauJRuuBvXUZIDl1KdhHXKnuwqlfdO',
+
+
     }
 };
