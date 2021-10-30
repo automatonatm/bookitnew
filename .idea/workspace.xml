@@ -20,16 +20,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0912240-de1d-40bc-b6ca-8006a1ead45c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/api/rooms/[id]/reviews.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/rcc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/admin/AllRooms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/admin/NewRoom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/admin/UpdateRoom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/layout/NotFound.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/review/ListReviews.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/review/NewReview.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/review/Review.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/404.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/create-room.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/rooms/[id]/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/rooms/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/admin/rooms/[id]/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/admin/rooms/[id]/reviews.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/admin/rooms/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/reviews/check-review-availability.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redux/actions/adminRoomActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redux/reducers/adminRoomReducers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/rooms/Room.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/rooms/Room.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/rooms/RoomDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/rooms/RoomDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/paymentControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/paymentControllers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/user/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/user/Profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/roomController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/roomController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middlewares/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Room.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Room.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/bookings/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/bookings/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/rooms/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/rooms/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/rooms/[id]/reviews.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/rooms/[id]/reviews.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/actions/roomActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/roomActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/constants/roomConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/constants/roomConstants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/reducers/bookingReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/reducers/bookingReducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/reducers/roomReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/reducers/roomReducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/reducers/userReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/reducers/userReducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/apiFeatures.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/apiFeatures.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,24 +88,41 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pages/api/bookings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/components/admin" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages/admin/rooms" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/pages/api/bookings" />
-      <recent name="$PROJECT_DIR$/redux/constants" />
-      <recent name="$PROJECT_DIR$/controllers" />
-      <recent name="$PROJECT_DIR$/components/user" />
-      <recent name="$PROJECT_DIR$/pages/api" />
+      <recent name="$PROJECT_DIR$/components/admin" />
+      <recent name="$PROJECT_DIR$/pages/admin" />
+      <recent name="$PROJECT_DIR$/redux/actions" />
+      <recent name="$PROJECT_DIR$/redux/reducers" />
+      <recent name="$PROJECT_DIR$/pages/api/admin" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.export">
+    <configuration name="roomActions.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/redux/actions/roomActions.js" working-dir="$PROJECT_DIR$/redux/actions">
+      <method v="2" />
+    </configuration>
     <configuration name="seeder.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/utils/seeder.js" working-dir="$PROJECT_DIR$/utils">
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -92,9 +135,22 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="export" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="export" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.export" />
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="Node.js.roomActions.js" />
         <item itemvalue="Node.js.seeder.js" />
       </list>
     </recent_temporary>
@@ -122,7 +178,10 @@
       <workItem from="1633794586615" duration="2865000" />
       <workItem from="1634406155194" duration="1856000" />
       <workItem from="1634485570834" duration="29000" />
-      <workItem from="1635364972679" duration="10996000" />
+      <workItem from="1635364972679" duration="11152000" />
+      <workItem from="1635408564669" duration="977000" />
+      <workItem from="1635455753197" duration="27786000" />
+      <workItem from="1635604885393" duration="13655000" />
     </task>
     <servers />
   </component>
@@ -151,45 +210,75 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1440" height="844" key="GridCell.Tab.0.bottom" timestamp="1635384050286">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1440" height="767" key="GridCell.Tab.0.bottom" timestamp="1635637847311">
+      <screen x="1440" y="0" width="1920" height="1148" />
     </state>
     <state width="1259" height="114" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1633315311869" />
-    <state width="1440" height="767" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1200@1440.0.1920.1200" timestamp="1635382331194" />
-    <state width="1440" height="844" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1635384050286" />
+    <state width="1440" height="819" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1360.768@1440.0.1360.768" timestamp="1635484682399" />
+    <state width="1440" height="767" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1200@1440.0.1920.1200" timestamp="1635637617892" />
+    <state width="1440" height="767" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1635462431809" />
     <state width="1278" height="728" key="GridCell.Tab.0.bottom/0.25.1280.775/1280.0.1920.1156@1280.0.1920.1156" timestamp="1633300571480" />
     <state width="1278" height="728" key="GridCell.Tab.0.bottom/0.25.1280.775/1280.25.1920.1131@1280.25.1920.1131" timestamp="1633299812717" />
-    <state width="1440" height="844" key="GridCell.Tab.0.center" timestamp="1635384050285">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1440" height="767" key="GridCell.Tab.0.bottom/0.25.1440.823/1440.0.1920.1200@1440.0.1920.1200" timestamp="1635516359925" />
+    <state width="1440" height="767" key="GridCell.Tab.0.bottom/0.25.1440.823/1440.25.1920.1175@1440.25.1920.1175" timestamp="1635516265028" />
+    <state width="1440" height="767" key="GridCell.Tab.0.bottom/0.25.1440.823@0.25.1440.823" timestamp="1635462475199" />
+    <state width="1440" height="819" key="GridCell.Tab.0.bottom/0.25.1440.875/1440.0.1360.716@1440.0.1360.716" timestamp="1635468944316" />
+    <state width="1440" height="767" key="GridCell.Tab.0.bottom/0.25.1440.875/1440.0.1920.1148@1440.0.1920.1148" timestamp="1635637847311" />
+    <state width="1440" height="767" key="GridCell.Tab.0.center" timestamp="1635637847310">
+      <screen x="1440" y="0" width="1920" height="1148" />
     </state>
     <state width="1259" height="114" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1633315311867" />
-    <state width="1440" height="767" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1200@1440.0.1920.1200" timestamp="1635382331193" />
-    <state width="1440" height="844" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1635384050285" />
+    <state width="1440" height="819" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1360.768@1440.0.1360.768" timestamp="1635484682397" />
+    <state width="1440" height="767" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1200@1440.0.1920.1200" timestamp="1635637617891" />
+    <state width="1440" height="767" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1635462431809" />
     <state width="1278" height="728" key="GridCell.Tab.0.center/0.25.1280.775/1280.0.1920.1156@1280.0.1920.1156" timestamp="1633300571477" />
     <state width="1278" height="728" key="GridCell.Tab.0.center/0.25.1280.775/1280.25.1920.1131@1280.25.1920.1131" timestamp="1633299812716" />
-    <state width="1440" height="844" key="GridCell.Tab.0.left" timestamp="1635384050284">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1440" height="767" key="GridCell.Tab.0.center/0.25.1440.823/1440.0.1920.1200@1440.0.1920.1200" timestamp="1635516359924" />
+    <state width="1440" height="767" key="GridCell.Tab.0.center/0.25.1440.823/1440.25.1920.1175@1440.25.1920.1175" timestamp="1635516265023" />
+    <state width="1440" height="767" key="GridCell.Tab.0.center/0.25.1440.823@0.25.1440.823" timestamp="1635462475198" />
+    <state width="1440" height="819" key="GridCell.Tab.0.center/0.25.1440.875/1440.0.1360.716@1440.0.1360.716" timestamp="1635468944313" />
+    <state width="1440" height="767" key="GridCell.Tab.0.center/0.25.1440.875/1440.0.1920.1148@1440.0.1920.1148" timestamp="1635637847310" />
+    <state width="1440" height="767" key="GridCell.Tab.0.left" timestamp="1635637847309">
+      <screen x="1440" y="0" width="1920" height="1148" />
     </state>
     <state width="1259" height="114" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1633315311866" />
-    <state width="1440" height="767" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1200@1440.0.1920.1200" timestamp="1635382331192" />
-    <state width="1440" height="844" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1635384050284" />
+    <state width="1440" height="819" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1360.768@1440.0.1360.768" timestamp="1635484682396" />
+    <state width="1440" height="767" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1200@1440.0.1920.1200" timestamp="1635637617890" />
+    <state width="1440" height="767" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1635462431808" />
     <state width="1278" height="728" key="GridCell.Tab.0.left/0.25.1280.775/1280.0.1920.1156@1280.0.1920.1156" timestamp="1633300571476" />
     <state width="1278" height="728" key="GridCell.Tab.0.left/0.25.1280.775/1280.25.1920.1131@1280.25.1920.1131" timestamp="1633299812715" />
-    <state width="1440" height="844" key="GridCell.Tab.0.right" timestamp="1635384050286">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1440" height="767" key="GridCell.Tab.0.left/0.25.1440.823/1440.0.1920.1200@1440.0.1920.1200" timestamp="1635516359923" />
+    <state width="1440" height="767" key="GridCell.Tab.0.left/0.25.1440.823/1440.25.1920.1175@1440.25.1920.1175" timestamp="1635516265020" />
+    <state width="1440" height="767" key="GridCell.Tab.0.left/0.25.1440.823@0.25.1440.823" timestamp="1635462475197" />
+    <state width="1440" height="819" key="GridCell.Tab.0.left/0.25.1440.875/1440.0.1360.716@1440.0.1360.716" timestamp="1635468944309" />
+    <state width="1440" height="767" key="GridCell.Tab.0.left/0.25.1440.875/1440.0.1920.1148@1440.0.1920.1148" timestamp="1635637847309" />
+    <state width="1440" height="767" key="GridCell.Tab.0.right" timestamp="1635637847310">
+      <screen x="1440" y="0" width="1920" height="1148" />
     </state>
     <state width="1259" height="114" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1633315311868" />
-    <state width="1440" height="767" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1200@1440.0.1920.1200" timestamp="1635382331193" />
-    <state width="1440" height="844" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1635384050286" />
+    <state width="1440" height="819" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1360.768@1440.0.1360.768" timestamp="1635484682398" />
+    <state width="1440" height="767" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1200@1440.0.1920.1200" timestamp="1635637617892" />
+    <state width="1440" height="767" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1635462431809" />
     <state width="1278" height="728" key="GridCell.Tab.0.right/0.25.1280.775/1280.0.1920.1156@1280.0.1920.1156" timestamp="1633300571479" />
     <state width="1278" height="728" key="GridCell.Tab.0.right/0.25.1280.775/1280.25.1920.1131@1280.25.1920.1131" timestamp="1633299812717" />
-    <state x="438" y="149" key="SettingsEditor" timestamp="1633806115696">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1440" height="767" key="GridCell.Tab.0.right/0.25.1440.823/1440.0.1920.1200@1440.0.1920.1200" timestamp="1635516359925" />
+    <state width="1440" height="767" key="GridCell.Tab.0.right/0.25.1440.823/1440.25.1920.1175@1440.25.1920.1175" timestamp="1635516265024" />
+    <state width="1440" height="767" key="GridCell.Tab.0.right/0.25.1440.823@0.25.1440.823" timestamp="1635462475198" />
+    <state width="1440" height="819" key="GridCell.Tab.0.right/0.25.1440.875/1440.0.1360.716@1440.0.1360.716" timestamp="1635468944316" />
+    <state width="1440" height="767" key="GridCell.Tab.0.right/0.25.1440.875/1440.0.1920.1148@1440.0.1920.1148" timestamp="1635637847310" />
+    <state x="1818" y="25" width="982" height="716" key="SettingsEditor" timestamp="1635468116661">
+      <screen x="1440" y="0" width="1360" height="768" />
     </state>
+    <state x="1818" y="25" width="982" height="716" key="SettingsEditor/0.0.1440.900/1440.0.1360.768@1440.0.1360.768" timestamp="1635468116661" />
     <state x="438" y="149" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1633806115696" />
     <state x="1939" y="211" width="602" height="777" key="find.popup" timestamp="1633301850096">
       <screen x="1280" y="0" width="1920" height="1156" />
     </state>
     <state x="1939" y="211" width="602" height="777" key="find.popup/0.25.1280.775/1280.0.1920.1156@1280.0.1920.1156" timestamp="1633301850096" />
+    <state x="1927" y="144" width="946" height="1057" key="search.everywhere.popup" timestamp="1635625457985">
+      <screen x="1440" y="0" width="1920" height="1200" />
+    </state>
+    <state x="1785" y="92" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/1440.0.1360.768@1440.0.1360.768" timestamp="1635479612557" />
+    <state x="1927" y="144" width="946" height="1057" key="search.everywhere.popup/0.0.1440.900/1440.0.1920.1200@1440.0.1920.1200" timestamp="1635625457985" />
   </component>
 </project>

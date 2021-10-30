@@ -4,6 +4,8 @@ module.exports = {
     },
     api: {
         bodyParser: true,
+        sizeLimit: '5mb',
+
     },
     env: {
 

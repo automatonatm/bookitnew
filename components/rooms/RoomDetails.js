@@ -10,7 +10,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import  moment from 'moment'
 
 
-import {clearErrors} from "../../redux/actions/roomActions";
+import {checkReviewAvailability, clearErrors} from "../../redux/actions/roomActions";
 import Head from "next/head";
 import Image from "next/image";
 import RoomFeatures from "./RoomFeatures";
@@ -19,6 +19,8 @@ import getStripe from "../../utils/getStripe";
 
 import {checkBooking, getBookedDates} from "../../redux/actions/bookingActions";
 import {CHECK_BOOKING_RESET} from "../../redux/constants/bookingConstants";
+import NewReview from "../review/NewReview";
+import ListReviews from "../review/ListReviews";
 
 
 moment().format();
@@ -35,12 +37,12 @@ const RoomDetails = () => {
     const dispatch = useDispatch();
     const router = useRouter();
 
-
-
     const {room, errors} = useSelector(state => state.room);
     const {user, loading} = useSelector(state => state.loadedUser);
     const {available, loading:bookingLoading} = useSelector(state => state.checkBooking);
     const {dates, loading:loadingDates} = useSelector(state => state.bookedDates);
+
+    const {canReview} = useSelector(state => state.canReview)
 
     const {id} = router.query;
 
@@ -53,6 +55,10 @@ const RoomDetails = () => {
 
         dispatch(getBookedDates(id));
 
+        if(id !== undefined) {
+            dispatch(checkReviewAvailability(id))
+        }
+
         if (errors) {
             toast.error(errors);
             dispatch(clearErrors())
@@ -62,8 +68,6 @@ const RoomDetails = () => {
         return  () => {
             dispatch({type: CHECK_BOOKING_RESET})
         }
-
-
 
     }, [dispatch, id]);
 
@@ -154,6 +158,7 @@ const RoomDetails = () => {
             <Head>
                 <title>{room.name} - BookIt</title>
             </Head>
+
             <div className="container container-fluid">
                 <h2 className='mt-5'>{room.name}</h2>
 
@@ -161,10 +166,10 @@ const RoomDetails = () => {
                     <div className="rating-outer">
                         <div
                             className="rating-inner"
-                            style={{width: `${(room.rating) / 5 * 100}%`}}
+                            style={{width: `${(room.ratings) / 5 * 100}%`}}
                         />
                     </div>
-                    <span id="no_of_reviews">({room.numOfPreviews} Reviews)</span>
+                    <span id="no_of_reviews">({room.numOfReviews} Reviews)</span>
                 </div>
 
                 {/*   {
@@ -260,29 +265,14 @@ const RoomDetails = () => {
                 </div>
 
 
-                <div className="reviews w-75">
-                    <h3>Reviews:</h3>
-                    <hr/>
-                    <div className="review-card my-3">
-                        <div className="rating-outer">
-                            <div className="rating-inner"></div>
-                        </div>
-                        <p className="review_user">by John</p>
-                        <p className="review_comment">Good Quality</p>
 
-                        <hr/>
-                    </div>
+                {canReview && (
+                    <NewReview />
+                )}
 
-                    <div className="review-card my-3">
-                        <div className="rating-outer">
-                            <div className="rating-inner"></div>
-                        </div>
-                        <p className="review_user">by John</p>
-                        <p className="review_comment">Good Quality</p>
 
-                        <hr/>
-                    </div>
-                </div>
+                <ListReviews reviews={room.reviews} />
+
             </div>
         </>
     );

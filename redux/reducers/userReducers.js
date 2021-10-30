@@ -24,9 +24,6 @@ import {
 export const authReducer = (state = {user: null}, action) => {
 
     switch (action.type) {
-
-
-
         case REGISTER_USER_REQUEST:
             return {
                 loading: true

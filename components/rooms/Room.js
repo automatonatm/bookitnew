@@ -7,12 +7,18 @@ const Room = ({room}) => {
     return (
         <div className="col-sm-12 col-md-6 col-lg-3 my-3">
             <div className="card p-2">
-                <Image
-                    className="card-img-top mx-auto"
-                    src={room.images[0].url}
-                    height={170}
-                    width=""
-                />
+                {room.images && room.images.length > 0 &&
+                    (
+
+                        <Image
+                            className="card-img-top mx-auto"
+                            src={room.images[0].url}
+                            height={170}
+                            width=""
+                        />
+                    )
+                }
+
                 <div className="card-body d-flex flex-column">
                     <h5 className="card-title">
                         <Link href={`/room/${room.id}`}>
@@ -26,11 +32,10 @@ const Room = ({room}) => {
                         <div className="rating-outer">
                             <div
                                 className="rating-inner"
-                                style={{width: `${(room.rating) / 5 * 100}%`}}
-
+                                style={{width: `${(room.ratings) / 5 * 100}%`}}
                             />
                         </div>
-                        <span id="no_of_reviews">({room.numOfPreviews} Reviews)</span>
+                        <span id="no_of_reviews">({room.numOfReviews} Reviews)</span>
                     </div>
 
                     <button className="btn btn-block view-btn">

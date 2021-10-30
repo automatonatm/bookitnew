@@ -1,11 +1,13 @@
 import {combineReducers} from 'redux'
 
 
-import {allRoomsReducer, roomDetailsReducer, roomReviewReducer} from "./roomReducers";
+import {allRoomsReducer, roomDetailsReducer, roomReviewReducer, reviewAvailability} from "./roomReducers";
+
 import {checkBookingReducer, bookedDatesReducer, bookingsReducer, bookingReducer} from "./bookingReducers";
 
-
 import {authReducer, userReducer, forgotPasswordReducer, loadUserReducer,} from "./userReducers";
+
+import {adminRoomsReducer} from "./adminRoomReducers";
 
 
 const reducer = combineReducers({
@@ -20,6 +22,9 @@ const reducer = combineReducers({
     bookings: bookingsReducer,
     booking: bookingReducer,
     reviews: roomReviewReducer,
+    canReview: reviewAvailability,
+    adminRooms: adminRoomsReducer
+
 });
 
 export default reducer

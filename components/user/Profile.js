@@ -9,10 +9,10 @@ import Loader from '../layout/Loader'
 import { useDispatch, useSelector } from 'react-redux';
 import { updateProfile, clearErrors } from '../../redux/actions/userActions'
 import { UPDATE_PROFILE_RESET } from '../../redux/constants/userConstants'
+
 import {loadUserReducer} from "../../redux/reducers/userReducers";
 
 const Profile = () => {
-
 
     const dispatch = useDispatch()
     const router = useRouter();
@@ -32,6 +32,7 @@ const Profile = () => {
     const { user: loadedUser, loading } = useSelector(state => state.loadedUser)
 
     const { error, isUpdated, loading: updateLoading } = useSelector(state => state.user)
+
 
 
     useEffect(() => {
@@ -69,7 +70,6 @@ const Profile = () => {
         }
 
         dispatch(updateProfile(userData))
-
 
 
     }
