@@ -1,5 +1,5 @@
 import nc from 'next-connect';
-import  {getRoom, updateRoom, deleteRoom} from "../../../../../controllers/roomController";
+import  {getRoom, updateRoom} from "../../../../../controllers/roomController";
 import dbConnect from "../../../../../config/dbConnect";
 import onError from '../../../../../middlewares/errorsController'
 
@@ -15,6 +15,6 @@ router.get(getRoom);
 
 router.put(updateRoom);
 
-router.delete(deleteRoom);
+
 
 export default router;

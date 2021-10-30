@@ -108,7 +108,7 @@
       <recent name="$PROJECT_DIR$/pages/api/admin" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.export">
+  <component name="RunManager" selected="npm.build">
     <configuration name="roomActions.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/redux/actions/roomActions.js" working-dir="$PROJECT_DIR$/redux/actions">
       <method v="2" />
     </configuration>
@@ -147,9 +147,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.export" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.export" />
         <item itemvalue="Node.js.roomActions.js" />
         <item itemvalue="Node.js.seeder.js" />
       </list>
